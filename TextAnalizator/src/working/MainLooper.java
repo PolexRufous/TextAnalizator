@@ -12,39 +12,31 @@ public class MainLooper {
 
 	private Text text;
 	
-	public void startLoop()
-	{
+	public void startLoop(){
 		Messanger.printHelloMessage();
-		while (true)
-		{
+		while (true){
 			Messanger.printChooseCommandMessage();
 			TextCommands command = getCommand();
-			if (command == TextCommands.EXIT)
-			{
+			if (command == TextCommands.EXIT){
 				break;
 			}
-			else
-			{
+			else{
 				TextCommandDispatcher.dispatch(command, text);
 			}
 		}
 		Messanger.printByeMessage();
 	}
 	
-	private TextCommands getCommand()
-	{
+	private TextCommands getCommand(){
 		int com;
 		TextCommands command = null;
-		try
-		{
+		try{
 			com = ReadWriteHelper.readInt();
-			command = TextCommands.getCommang(com);
+			command = TextCommands.getCommand(com);
 		}
-		catch (IOException e)
-		{
+		catch (IOException e){
 			Messanger.printExceptionMessage(e);
 		}
-				
 		return command;
 	}
 }

@@ -13,6 +13,7 @@ public class Messanger {
 	
 	public static void printChooseCommandMessage()
 	{
+		Messanger.printSeparatorLine();
 		ReadWriteHelper.printMessage("Please choose action.");
 		for (TextCommands each : TextCommands.values())
 		{
@@ -45,4 +46,30 @@ public class Messanger {
 	{
 		ReadWriteHelper.printMessage("Sorry, this action is not working yet!");		
 	}
+	
+	public static void printOperationCompleteMessage() 
+	{
+		ReadWriteHelper.printMessage("Operation complete!");		
+	}
+	
+	public static void printWriteTextToConcoleMessage() 
+	{
+		ReadWriteHelper.printMessage("Write text to console! End writing by empty line (two times push Enter).");		
+	}
+	
+	public static void printEnterFileNameMessage() 
+	{
+		ReadWriteHelper.printMessage("Enter absolute part to file which contains text (only .txt supported).");		
+	}
+	
+	public static void printIncorrectFileNameMessage() 
+	{
+		ReadWriteHelper.printMessage("Incorrect file name or file is not available.");
+	}
+	
+	public static void printSeparatorLine() 
+	{
+		ReadWriteHelper.printMessage("|----------------------------------------------------------------|");
+	}
+	
 }

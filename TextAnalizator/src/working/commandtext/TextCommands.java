@@ -34,7 +34,7 @@ public enum TextCommands {
 	 * @return TextCommands corresponded to ordinal parameter <br/>
 	 * null if no such TextCommands
 	 */
-	public static TextCommands getCommang(int ordinal)
+	public static TextCommands getCommand(int ordinal)
 	{
 		
 		for(TextCommands each : TextCommands.values())

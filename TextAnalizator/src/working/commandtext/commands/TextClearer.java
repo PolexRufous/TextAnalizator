@@ -8,8 +8,8 @@ public class TextClearer implements TextCommandExecutor {
 
 	@Override
 	public void execute(Text text) {
-		// TODO Auto-generated method stub
-		Messanger.printMethotIsNotWorkingMessage();
+		text = null;
+		Messanger.printOperationCompleteMessage();
 	}
 
 }
